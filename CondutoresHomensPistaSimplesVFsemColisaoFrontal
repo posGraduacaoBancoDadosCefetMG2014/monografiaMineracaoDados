@@ -1,0 +1,57 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 20 -T 0 -C 0.4 -D 0.005 -U 1.0 -M 0.01 -S -1.0 -c -1
+Relation:     ocorrenciasAcidentesDPRF-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C8-L1,3-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C9-L2-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C4-Lfirst-3-weka.filters.unsupervised.attribute.Remove-R4,8-9-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C6-L1,2,3-weka.filters.unsupervised.attribute.Remove-R6-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C4-L7
+Instances:    1622
+Attributes:   10
+              municipio
+              trecho
+              RODOVIA
+              tipo_acidente
+              causa_acidente
+              faixa_idade_pessoa_envolvida
+              periodo_dia_reg_ocorrencia
+              dia_da_semana_ocorrencia
+              semana_do_mes_ocorrencia
+              mes_da_ocorrencia
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.02 (41 instances)
+Minimum metric <confidence>: 0.4
+Number of cycles performed: 195
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 66
+
+Size of set of large itemsets L(2): 317
+
+Size of set of large itemsets L(3): 13
+
+Best rules found:
+
+ 1. trecho=ENTR MG-435 (JOSÉ DE MELO) - ENTR BR-262(A) 41 ==> RODOVIA=RODOVIA_381 41    conf:(1)
+ 2. causa_acidente=Desobediênciaàsinalização 70 ==> tipo_acidente=ColisãoTransversal 55    conf:(0.79)
+ 3. tipo_acidente=ColisãoTransversal semana_do_mes_ocorrencia=TERCEIRA_SEMANA 95 ==> causa_acidente=Faltadeatenção 64    conf:(0.67)
+ 4. causa_acidente=Faltadeatenção semana_do_mes_ocorrencia=TERCEIRA_SEMANA 97 ==> tipo_acidente=ColisãoTransversal 64    conf:(0.66)
+ 5. RODOVIA=RODOVIA_40 causa_acidente=Faltadeatenção 72 ==> tipo_acidente=ColisãoTransversal 45    conf:(0.63)
+ 6. causa_acidente=Ultrapassagemindevida 85 ==> tipo_acidente=Colisãolateral 53    conf:(0.62)
+ 7. causa_acidente=Dormindo 76 ==> tipo_acidente=SaídadePista 45    conf:(0.59)
+ 8. tipo_acidente=Atropelamentodepessoa 132 ==> causa_acidente=Outras 77    conf:(0.58)
+ 9. causa_acidente=Faltadeatenção faixa_idade_pessoa_envolvida=IDADE_50_a_64_ANOS 71 ==> tipo_acidente=ColisãoTransversal 41    conf:(0.58)
+10. RODOVIA=RODOVIA_40 tipo_acidente=ColisãoTransversal 79 ==> causa_acidente=Faltadeatenção 45    conf:(0.57)
+11. tipo_acidente=Colisãolateral semana_do_mes_ocorrencia=QUARTA_SEMANA 81 ==> causa_acidente=Velocidadeincompatível 46    conf:(0.57)
+12. causa_acidente=Faltadeatenção periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 118 ==> tipo_acidente=ColisãoTransversal 67    conf:(0.57)
+13. tipo_acidente=ColisãoTransversal periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 119 ==> causa_acidente=Faltadeatenção 67    conf:(0.56)
+14. tipo_acidente=ColisãoTransversal semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 93 ==> causa_acidente=Faltadeatenção 52    conf:(0.56)
+15. causa_acidente=Faltadeatenção periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 92 ==> tipo_acidente=ColisãoTransversal 51    conf:(0.55)
+16. causa_acidente=Faltadeatenção 360 ==> tipo_acidente=ColisãoTransversal 195    conf:(0.54)
+17. causa_acidente=Faltadeatenção semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 96 ==> tipo_acidente=ColisãoTransversal 52    conf:(0.54)
+18. tipo_acidente=Colisãolateral causa_acidente=Velocidadeincompatível 87 ==> semana_do_mes_ocorrencia=QUARTA_SEMANA 46    conf:(0.53)
+19. periodo_dia_reg_ocorrencia=TARDE_12_00_A_17_00 semana_do_mes_ocorrencia=QUARTA_SEMANA 87 ==> causa_acidente=Velocidadeincompatível 45    conf:(0.52)
+20. tipo_acidente=ColisãoTransversal 397 ==> causa_acidente=Faltadeatenção 195    conf:(0.49)
+

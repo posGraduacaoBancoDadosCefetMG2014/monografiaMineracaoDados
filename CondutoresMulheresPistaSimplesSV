@@ -1,0 +1,137 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 100 -T 0 -C 0.4 -D 0.005 -U 1.0 -M 0.01 -S -1.0 -c -1
+Relation:     ocorrenciasAcidentesDPRF-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C8-L1,3-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C9-L1,3-weka.filters.unsupervised.attribute.Remove-R8-9-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C4-Lfirst-3-weka.filters.unsupervised.attribute.Remove-R4-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C6-L1,2,4-weka.filters.unsupervised.attribute.Remove-R6
+Instances:    1583
+Attributes:   10
+              municipio
+              trecho
+              RODOVIA
+              tipo_acidente
+              causa_acidente
+              faixa_idade_pessoa_envolvida
+              periodo_dia_reg_ocorrencia
+              dia_da_semana_ocorrencia
+              semana_do_mes_ocorrencia
+              mes_da_ocorrencia
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.03 (55 instances)
+Minimum metric <confidence>: 0.4
+Number of cycles performed: 193
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 55
+
+Size of set of large itemsets L(2): 207
+
+Size of set of large itemsets L(3): 33
+
+Best rules found:
+
+  1. trecho=ENTR MG-435 (JOSÉ DE MELO) - ENTR BR-262(A) 97 ==> RODOVIA=RODOVIA_381 97    conf:(1)
+  2. trecho=ENTR MG-435 (JOSÉ DE MELO) - ENTR BR-262(A) tipo_acidente=Colisãotraseira 77 ==> RODOVIA=RODOVIA_381 77    conf:(1)
+  3. trecho=ENTR BR-262 (JOÃO MONLEVADE) - ENTR MG-129 (SÃO GONÇALO DO RIO ABAIXO) 62 ==> RODOVIA=RODOVIA_381 62    conf:(1)
+  4. causa_acidente=Nãoguardardistânciadesegurança semana_do_mes_ocorrencia=SEGUNDA_SEMANA 63 ==> tipo_acidente=Colisãotraseira 60    conf:(0.95)
+  5. RODOVIA=RODOVIA_381 causa_acidente=Nãoguardardistânciadesegurança 92 ==> tipo_acidente=Colisãotraseira 86    conf:(0.93)
+  6. causa_acidente=Nãoguardardistânciadesegurança 243 ==> tipo_acidente=Colisãotraseira 227    conf:(0.93)
+  7. causa_acidente=Nãoguardardistânciadesegurança periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 95 ==> tipo_acidente=Colisãotraseira 88    conf:(0.93)
+  8. causa_acidente=Nãoguardardistânciadesegurança faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 74 ==> tipo_acidente=Colisãotraseira 67    conf:(0.91)
+  9. trecho=ENTR MG-435 (JOSÉ DE MELO) - ENTR BR-262(A) 97 ==> tipo_acidente=Colisãotraseira 77    conf:(0.79)
+ 10. trecho=ENTR MG-435 (JOSÉ DE MELO) - ENTR BR-262(A) RODOVIA=RODOVIA_381 97 ==> tipo_acidente=Colisãotraseira 77    conf:(0.79)
+ 11. trecho=ENTR MG-435 (JOSÉ DE MELO) - ENTR BR-262(A) 97 ==> RODOVIA=RODOVIA_381 tipo_acidente=Colisãotraseira 77    conf:(0.79)
+ 12. RODOVIA=RODOVIA_40 tipo_acidente=Colisãotraseira 103 ==> causa_acidente=Faltadeatenção 74    conf:(0.72)
+ 13. RODOVIA=RODOVIA_116 periodo_dia_reg_ocorrencia=TARDE_12_00_A_17_00 86 ==> causa_acidente=Faltadeatenção 59    conf:(0.69)
+ 14. tipo_acidente=ColisãoTransversal 198 ==> causa_acidente=Faltadeatenção 133    conf:(0.67)
+ 15. tipo_acidente=Colisãolateral periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 89 ==> causa_acidente=Faltadeatenção 56    conf:(0.63)
+ 16. RODOVIA=RODOVIA_40 periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 105 ==> causa_acidente=Faltadeatenção 66    conf:(0.63)
+ 17. RODOVIA=RODOVIA_116 tipo_acidente=Colisãotraseira 128 ==> causa_acidente=Faltadeatenção 78    conf:(0.61)
+ 18. RODOVIA=RODOVIA_116 faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 100 ==> causa_acidente=Faltadeatenção 59    conf:(0.59)
+ 19. causa_acidente=Faltadeatenção periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 155 ==> tipo_acidente=Colisãotraseira 88    conf:(0.57)
+ 20. RODOVIA=RODOVIA_365 103 ==> tipo_acidente=Colisãotraseira 58    conf:(0.56)
+ 21. tipo_acidente=Colisãotraseira dia_da_semana_ocorrencia=SEXTA_FEIRA 114 ==> causa_acidente=Faltadeatenção 63    conf:(0.55)
+ 22. tipo_acidente=Colisãolateral 260 ==> causa_acidente=Faltadeatenção 142    conf:(0.55)
+ 23. RODOVIA=RODOVIA_40 289 ==> causa_acidente=Faltadeatenção 156    conf:(0.54)
+ 24. causa_acidente=Faltadeatenção semana_do_mes_ocorrencia=QUARTA_SEMANA 121 ==> tipo_acidente=Colisãotraseira 65    conf:(0.54)
+ 25. RODOVIA=RODOVIA_116 295 ==> causa_acidente=Faltadeatenção 158    conf:(0.54)
+ 26. RODOVIA=RODOVIA_381 causa_acidente=Faltadeatenção 117 ==> tipo_acidente=Colisãotraseira 62    conf:(0.53)
+ 27. causa_acidente=Faltadeatenção semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 155 ==> tipo_acidente=Colisãotraseira 82    conf:(0.53)
+ 28. causa_acidente=Faltadeatenção faixa_idade_pessoa_envolvida=IDADE_25_a_29_ANOS 106 ==> tipo_acidente=Colisãotraseira 56    conf:(0.53)
+ 29. tipo_acidente=Colisãotraseira periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 167 ==> causa_acidente=Faltadeatenção 88    conf:(0.53)
+ 30. tipo_acidente=Colisãotraseira semana_do_mes_ocorrencia=TERCEIRA_SEMANA 153 ==> causa_acidente=Faltadeatenção 78    conf:(0.51)
+ 31. causa_acidente=Faltadeatenção dia_da_semana_ocorrencia=SEXTA_FEIRA 124 ==> tipo_acidente=Colisãotraseira 63    conf:(0.51)
+ 32. RODOVIA=RODOVIA_381 376 ==> tipo_acidente=Colisãotraseira 191    conf:(0.51)
+ 33. tipo_acidente=Colisãotraseira periodo_dia_reg_ocorrencia=TARDE_12_00_A_17_00 154 ==> causa_acidente=Faltadeatenção 78    conf:(0.51)
+ 34. RODOVIA=RODOVIA_381 faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 115 ==> tipo_acidente=Colisãotraseira 57    conf:(0.5)
+ 35. RODOVIA=RODOVIA_116 causa_acidente=Faltadeatenção 158 ==> tipo_acidente=Colisãotraseira 78    conf:(0.49)
+ 36. mes_da_ocorrencia=FEVEREIRO 138 ==> tipo_acidente=Colisãotraseira 68    conf:(0.49)
+ 37. tipo_acidente=Colisãotraseira semana_do_mes_ocorrencia=QUARTA_SEMANA 132 ==> causa_acidente=Faltadeatenção 65    conf:(0.49)
+ 38. faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS periodo_dia_reg_ocorrencia=TARDE_12_00_A_17_00 126 ==> causa_acidente=Faltadeatenção 62    conf:(0.49)
+ 39. tipo_acidente=Colisãotraseira semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 167 ==> causa_acidente=Faltadeatenção 82    conf:(0.49)
+ 40. tipo_acidente=Colisãotraseira 664 ==> causa_acidente=Faltadeatenção 320    conf:(0.48)
+ 41. dia_da_semana_ocorrencia=SEGUNDA_FEIRA 220 ==> causa_acidente=Faltadeatenção 106    conf:(0.48)
+ 42. causa_acidente=Faltadeatenção 672 ==> tipo_acidente=Colisãotraseira 320    conf:(0.48)
+ 43. faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS semana_do_mes_ocorrencia=SEGUNDA_SEMANA 124 ==> causa_acidente=Faltadeatenção 59    conf:(0.48)
+ 44. RODOVIA=RODOVIA_40 causa_acidente=Faltadeatenção 156 ==> tipo_acidente=Colisãotraseira 74    conf:(0.47)
+ 45. causa_acidente=Velocidadeincompatível 207 ==> tipo_acidente=SaídadePista 98    conf:(0.47)
+ 46. mes_da_ocorrencia=AGOSTO 129 ==> causa_acidente=Faltadeatenção 61    conf:(0.47)
+ 47. tipo_acidente=Colisãotraseira faixa_idade_pessoa_envolvida=IDADE_40_a_49_ANOS 149 ==> causa_acidente=Faltadeatenção 70    conf:(0.47)
+ 48. RODOVIA=RODOVIA_381 periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 124 ==> tipo_acidente=Colisãotraseira 58    conf:(0.47)
+ 49. tipo_acidente=Colisãotraseira faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 182 ==> causa_acidente=Faltadeatenção 85    conf:(0.47)
+ 50. mes_da_ocorrencia=MARCO 150 ==> tipo_acidente=Colisãotraseira 70    conf:(0.47)
+ 51. dia_da_semana_ocorrencia=QUARTA_FEIRA 191 ==> tipo_acidente=Colisãotraseira 89    conf:(0.47)
+ 52. semana_do_mes_ocorrencia=TERCEIRA_SEMANA 372 ==> causa_acidente=Faltadeatenção 173    conf:(0.47)
+ 53. tipo_acidente=Colisãotraseira faixa_idade_pessoa_envolvida=IDADE_25_a_29_ANOS 122 ==> causa_acidente=Faltadeatenção 56    conf:(0.46)
+ 54. dia_da_semana_ocorrencia=DOMINGO 266 ==> tipo_acidente=Colisãotraseira 122    conf:(0.46)
+ 55. faixa_idade_pessoa_envolvida=IDADE_40_a_49_ANOS 338 ==> causa_acidente=Faltadeatenção 155    conf:(0.46)
+ 56. mes_da_ocorrencia=FEVEREIRO 138 ==> causa_acidente=Faltadeatenção 63    conf:(0.46)
+ 57. periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 semana_do_mes_ocorrencia=TERCEIRA_SEMANA 136 ==> causa_acidente=Faltadeatenção 62    conf:(0.46)
+ 58. faixa_idade_pessoa_envolvida=IDADE_40_a_49_ANOS periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 123 ==> causa_acidente=Faltadeatenção 56    conf:(0.46)
+ 59. periodo_dia_reg_ocorrencia=TARDE_12_00_A_17_00 385 ==> causa_acidente=Faltadeatenção 174    conf:(0.45)
+ 60. causa_acidente=Faltadeatenção faixa_idade_pessoa_envolvida=IDADE_40_a_49_ANOS 155 ==> tipo_acidente=Colisãotraseira 70    conf:(0.45)
+ 61. causa_acidente=Faltadeatenção semana_do_mes_ocorrencia=TERCEIRA_SEMANA 173 ==> tipo_acidente=Colisãotraseira 78    conf:(0.45)
+ 62. mes_da_ocorrencia=JULHO 142 ==> causa_acidente=Faltadeatenção 64    conf:(0.45)
+ 63. RODOVIA=RODOVIA_381 tipo_acidente=Colisãotraseira 191 ==> causa_acidente=Nãoguardardistânciadesegurança 86    conf:(0.45)
+ 64. tipo_acidente=Colisãotraseira semana_do_mes_ocorrencia=SEGUNDA_SEMANA 158 ==> causa_acidente=Faltadeatenção 71    conf:(0.45)
+ 65. tipo_acidente=Colisãotraseira periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 227 ==> causa_acidente=Faltadeatenção 102    conf:(0.45)
+ 66. semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 372 ==> tipo_acidente=Colisãotraseira 167    conf:(0.45)
+ 67. causa_acidente=Faltadeatenção periodo_dia_reg_ocorrencia=TARDE_12_00_A_17_00 174 ==> tipo_acidente=Colisãotraseira 78    conf:(0.45)
+ 68. faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 159 ==> causa_acidente=Faltadeatenção 71    conf:(0.45)
+ 69. periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 377 ==> tipo_acidente=Colisãotraseira 167    conf:(0.44)
+ 70. faixa_idade_pessoa_envolvida=IDADE_50_a_64_ANOS 242 ==> tipo_acidente=Colisãotraseira 107    conf:(0.44)
+ 71. semana_do_mes_ocorrencia=SEGUNDA_SEMANA 383 ==> causa_acidente=Faltadeatenção 169    conf:(0.44)
+ 72. faixa_idade_pessoa_envolvida=IDADE_40_a_49_ANOS 338 ==> tipo_acidente=Colisãotraseira 149    conf:(0.44)
+ 73. dia_da_semana_ocorrencia=SEXTA_FEIRA 282 ==> causa_acidente=Faltadeatenção 124    conf:(0.44)
+ 74. tipo_acidente=ColisãoTransversal 198 ==> periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 87    conf:(0.44)
+ 75. mes_da_ocorrencia=JULHO 142 ==> tipo_acidente=Colisãotraseira 62    conf:(0.44)
+ 76. periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 543 ==> causa_acidente=Faltadeatenção 237    conf:(0.44)
+ 77. faixa_idade_pessoa_envolvida=IDADE_25_a_29_ANOS 280 ==> tipo_acidente=Colisãotraseira 122    conf:(0.44)
+ 78. dia_da_semana_ocorrencia=SABADO 241 ==> causa_acidente=Faltadeatenção 105    conf:(0.44)
+ 79. mes_da_ocorrencia=JANEIRO 175 ==> causa_acidente=Faltadeatenção 76    conf:(0.43)
+ 80. RODOVIA=RODOVIA_116 295 ==> tipo_acidente=Colisãotraseira 128    conf:(0.43)
+ 81. periodo_dia_reg_ocorrencia=OCASO_17_00_A_18_30 134 ==> tipo_acidente=Colisãotraseira 58    conf:(0.43)
+ 82. dia_da_semana_ocorrencia=TERCA_FEIRA 190 ==> causa_acidente=Faltadeatenção 82    conf:(0.43)
+ 83. mes_da_ocorrencia=MAIO 130 ==> causa_acidente=Faltadeatenção 56    conf:(0.43)
+ 84. causa_acidente=Faltadeatenção periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 237 ==> tipo_acidente=Colisãotraseira 102    conf:(0.43)
+ 85. dia_da_semana_ocorrencia=SEGUNDA_FEIRA 220 ==> tipo_acidente=Colisãotraseira 94    conf:(0.43)
+ 86. mes_da_ocorrencia=AGOSTO 129 ==> tipo_acidente=Colisãotraseira 55    conf:(0.43)
+ 87. faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 488 ==> causa_acidente=Faltadeatenção 208    conf:(0.43)
+ 88. RODOVIA=RODOVIA_262 188 ==> causa_acidente=Faltadeatenção 80    conf:(0.43)
+ 89. RODOVIA=RODOVIA_40 causa_acidente=Faltadeatenção 156 ==> periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 66    conf:(0.42)
+ 90. causa_acidente=Faltadeatenção semana_do_mes_ocorrencia=SEGUNDA_SEMANA 169 ==> tipo_acidente=Colisãotraseira 71    conf:(0.42)
+ 91. faixa_idade_pessoa_envolvida=IDADE_18_a_24_ANOS 148 ==> causa_acidente=Faltadeatenção 62    conf:(0.42)
+ 92. dia_da_semana_ocorrencia=QUARTA_FEIRA 191 ==> causa_acidente=Faltadeatenção 80    conf:(0.42)
+ 93. periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 543 ==> tipo_acidente=Colisãotraseira 227    conf:(0.42)
+ 94. mes_da_ocorrencia=JANEIRO 175 ==> tipo_acidente=Colisãotraseira 73    conf:(0.42)
+ 95. semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 372 ==> causa_acidente=Faltadeatenção 155    conf:(0.42)
+ 96. periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 semana_do_mes_ocorrencia=SEGUNDA_SEMANA 152 ==> causa_acidente=Faltadeatenção 63    conf:(0.41)
+ 97. semana_do_mes_ocorrencia=SEGUNDA_SEMANA 383 ==> tipo_acidente=Colisãotraseira 158    conf:(0.41)
+ 98. semana_do_mes_ocorrencia=TERCEIRA_SEMANA 372 ==> tipo_acidente=Colisãotraseira 153    conf:(0.41)
+ 99. periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 377 ==> causa_acidente=Faltadeatenção 155    conf:(0.41)
+100. tipo_acidente=SaídadePista 239 ==> causa_acidente=Velocidadeincompatível 98    conf:(0.41)
+

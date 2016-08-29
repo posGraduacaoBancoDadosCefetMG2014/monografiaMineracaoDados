@@ -1,0 +1,137 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 100 -T 0 -C 0.4 -D 0.005 -U 1.0 -M 0.01 -S -1.0 -c -1
+Relation:     ocorrenciasAcidentesDPRF-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C8-L1,3-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C9-L1,3-weka.filters.unsupervised.attribute.Remove-R8-9-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C4-Lfirst-3-weka.filters.unsupervised.attribute.Remove-R4-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C6-Lfirst-3-weka.filters.unsupervised.attribute.Remove-R6
+Instances:    108
+Attributes:   10
+              municipio
+              trecho
+              RODOVIA
+              tipo_acidente
+              causa_acidente
+              faixa_idade_pessoa_envolvida
+              periodo_dia_reg_ocorrencia
+              dia_da_semana_ocorrencia
+              semana_do_mes_ocorrencia
+              mes_da_ocorrencia
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.06 (6 instances)
+Minimum metric <confidence>: 0.4
+Number of cycles performed: 188
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 51
+
+Size of set of large itemsets L(2): 105
+
+Size of set of large itemsets L(3): 14
+
+Best rules found:
+
+  1. RODOVIA=RODOVIA_40 semana_do_mes_ocorrencia=TERCEIRA_SEMANA 7 ==> faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 7    conf:(1)
+  2. trecho=ENTR MG-275 (P/CARANDAÍ) - ACESSO ALTO DOCE (INÍCIO PISTA DUPLA) 6 ==> RODOVIA=RODOVIA_40 6    conf:(1)
+  3. RODOVIA=RODOVIA_381 causa_acidente=Velocidadeincompatível 6 ==> tipo_acidente=Colisãofrontal 6    conf:(1)
+  4. causa_acidente=Velocidadeincompatível periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 8 ==> tipo_acidente=Colisãofrontal 7    conf:(0.88)
+  5. tipo_acidente=ColisãoTransversal semana_do_mes_ocorrencia=SEGUNDA_SEMANA 7 ==> causa_acidente=Outras 6    conf:(0.86)
+  6. tipo_acidente=ColisãoTransversal causa_acidente=Outras 7 ==> semana_do_mes_ocorrencia=SEGUNDA_SEMANA 6    conf:(0.86)
+  7. causa_acidente=Ultrapassagemindevida faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 8 ==> tipo_acidente=Colisãofrontal 6    conf:(0.75)
+  8. faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS dia_da_semana_ocorrencia=DOMINGO 8 ==> tipo_acidente=Colisãofrontal 6    conf:(0.75)
+  9. dia_da_semana_ocorrencia=QUINTA_FEIRA semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 8 ==> causa_acidente=Outras 6    conf:(0.75)
+ 10. causa_acidente=Outras semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 8 ==> dia_da_semana_ocorrencia=QUINTA_FEIRA 6    conf:(0.75)
+ 11. mes_da_ocorrencia=DEZEMBRO 11 ==> tipo_acidente=Colisãofrontal 8    conf:(0.73)
+ 12. mes_da_ocorrencia=OUTUBRO 11 ==> semana_do_mes_ocorrencia=SEGUNDA_SEMANA 8    conf:(0.73)
+ 13. dia_da_semana_ocorrencia=QUARTA_FEIRA 14 ==> tipo_acidente=Colisãofrontal 10    conf:(0.71)
+ 14. RODOVIA=RODOVIA_381 17 ==> tipo_acidente=Colisãofrontal 12    conf:(0.71)
+ 15. faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS semana_do_mes_ocorrencia=TERCEIRA_SEMANA 10 ==> RODOVIA=RODOVIA_40 7    conf:(0.7)
+ 16. periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 semana_do_mes_ocorrencia=SEGUNDA_SEMANA 10 ==> causa_acidente=Outras 7    conf:(0.7)
+ 17. causa_acidente=Outras periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 10 ==> semana_do_mes_ocorrencia=SEGUNDA_SEMANA 7    conf:(0.7)
+ 18. causa_acidente=Ultrapassagemindevida 15 ==> tipo_acidente=Colisãofrontal 10    conf:(0.67)
+ 19. periodo_dia_reg_ocorrencia=MADRUGADA_00_00_A_05_00 12 ==> tipo_acidente=Colisãofrontal 8    conf:(0.67)
+ 20. mes_da_ocorrencia=MARCO 9 ==> tipo_acidente=Colisãofrontal 6    conf:(0.67)
+ 21. mes_da_ocorrencia=MARCO 9 ==> causa_acidente=Outras 6    conf:(0.67)
+ 22. RODOVIA=RODOVIA_40 periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 9 ==> causa_acidente=Outras 6    conf:(0.67)
+ 23. RODOVIA=RODOVIA_40 causa_acidente=Outras 9 ==> periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 6    conf:(0.67)
+ 24. tipo_acidente=Colisãofrontal dia_da_semana_ocorrencia=DOMINGO 9 ==> faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 6    conf:(0.67)
+ 25. faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 9 ==> tipo_acidente=Colisãofrontal 6    conf:(0.67)
+ 26. causa_acidente=Outras dia_da_semana_ocorrencia=QUINTA_FEIRA 9 ==> semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 6    conf:(0.67)
+ 27. causa_acidente=Velocidadeincompatível 23 ==> tipo_acidente=Colisãofrontal 15    conf:(0.65)
+ 28. mes_da_ocorrencia=NOVEMBRO 11 ==> tipo_acidente=Colisãofrontal 7    conf:(0.64)
+ 29. faixa_idade_pessoa_envolvida=IDADE_40_a_49_ANOS 16 ==> tipo_acidente=Colisãofrontal 10    conf:(0.63)
+ 30. causa_acidente=Faltadeatenção 16 ==> periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 10    conf:(0.63)
+ 31. RODOVIA=RODOVIA_262 10 ==> tipo_acidente=Colisãofrontal 6    conf:(0.6)
+ 32. semana_do_mes_ocorrencia=QUINTA_SEMANA 10 ==> causa_acidente=Outras 6    conf:(0.6)
+ 33. mes_da_ocorrencia=JANEIRO 10 ==> periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 6    conf:(0.6)
+ 34. causa_acidente=Outras periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 10 ==> RODOVIA=RODOVIA_40 6    conf:(0.6)
+ 35. tipo_acidente=Colisãofrontal causa_acidente=Ultrapassagemindevida 10 ==> faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 6    conf:(0.6)
+ 36. faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS semana_do_mes_ocorrencia=TERCEIRA_SEMANA 10 ==> tipo_acidente=Colisãofrontal 6    conf:(0.6)
+ 37. periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 10 ==> tipo_acidente=Colisãofrontal 6    conf:(0.6)
+ 38. semana_do_mes_ocorrencia=QUARTA_SEMANA 24 ==> tipo_acidente=Colisãofrontal 14    conf:(0.58)
+ 39. faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 35 ==> tipo_acidente=Colisãofrontal 20    conf:(0.57)
+ 40. periodo_dia_reg_ocorrencia=TARDE_12_00_A_17_00 23 ==> tipo_acidente=Colisãofrontal 13    conf:(0.57)
+ 41. faixa_idade_pessoa_envolvida=IDADE_50_a_64_ANOS 16 ==> periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 9    conf:(0.56)
+ 42. RODOVIA=RODOVIA_40 25 ==> faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 14    conf:(0.56)
+ 43. tipo_acidente=ColisãoTransversal 18 ==> periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 10    conf:(0.56)
+ 44. semana_do_mes_ocorrencia=TERCEIRA_SEMANA 20 ==> tipo_acidente=Colisãofrontal 11    conf:(0.55)
+ 45. mes_da_ocorrencia=OUTUBRO 11 ==> tipo_acidente=Colisãofrontal 6    conf:(0.55)
+ 46. dia_da_semana_ocorrencia=SEGUNDA_FEIRA 11 ==> causa_acidente=Outras 6    conf:(0.55)
+ 47. mes_da_ocorrencia=NOVEMBRO 11 ==> dia_da_semana_ocorrencia=DOMINGO 6    conf:(0.55)
+ 48. RODOVIA=RODOVIA_40 tipo_acidente=Colisãofrontal 11 ==> faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 6    conf:(0.55)
+ 49. faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 11 ==> tipo_acidente=Colisãofrontal 6    conf:(0.55)
+ 50. tipo_acidente=Colisãofrontal semana_do_mes_ocorrencia=TERCEIRA_SEMANA 11 ==> faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 6    conf:(0.55)
+ 51. mes_da_ocorrencia=JUNHO 13 ==> RODOVIA=RODOVIA_40 7    conf:(0.54)
+ 52. RODOVIA=RODOVIA_116 15 ==> causa_acidente=Outras 8    conf:(0.53)
+ 53. causa_acidente=Ultrapassagemindevida 15 ==> faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 8    conf:(0.53)
+ 54. faixa_idade_pessoa_envolvida=IDADE_25_a_29_ANOS 17 ==> tipo_acidente=Colisãofrontal 9    conf:(0.53)
+ 55. dia_da_semana_ocorrencia=DOMINGO 19 ==> periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 10    conf:(0.53)
+ 56. periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 30 ==> tipo_acidente=Colisãofrontal 15    conf:(0.5)
+ 57. semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 24 ==> tipo_acidente=Colisãofrontal 12    conf:(0.5)
+ 58. semana_do_mes_ocorrencia=TERCEIRA_SEMANA 20 ==> faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 10    conf:(0.5)
+ 59. RODOVIA=RODOVIA_40 faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 14 ==> semana_do_mes_ocorrencia=TERCEIRA_SEMANA 7    conf:(0.5)
+ 60. causa_acidente=Outras semana_do_mes_ocorrencia=SEGUNDA_SEMANA 14 ==> periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 7    conf:(0.5)
+ 61. RODOVIA=RODOVIA_365 12 ==> tipo_acidente=Colisãofrontal 6    conf:(0.5)
+ 62. periodo_dia_reg_ocorrencia=MADRUGADA_00_00_A_05_00 12 ==> causa_acidente=Velocidadeincompatível 6    conf:(0.5)
+ 63. RODOVIA=RODOVIA_381 tipo_acidente=Colisãofrontal 12 ==> causa_acidente=Velocidadeincompatível 6    conf:(0.5)
+ 64. tipo_acidente=Colisãofrontal semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 12 ==> faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 6    conf:(0.5)
+ 65. tipo_acidente=Colisãofrontal semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 12 ==> periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 6    conf:(0.5)
+ 66. dia_da_semana_ocorrencia=SABADO 23 ==> tipo_acidente=Colisãofrontal 11    conf:(0.48)
+ 67. dia_da_semana_ocorrencia=QUINTA_FEIRA 19 ==> tipo_acidente=Colisãofrontal 9    conf:(0.47)
+ 68. dia_da_semana_ocorrencia=DOMINGO 19 ==> tipo_acidente=Colisãofrontal 9    conf:(0.47)
+ 69. dia_da_semana_ocorrencia=QUINTA_FEIRA 19 ==> causa_acidente=Outras 9    conf:(0.47)
+ 70. dia_da_semana_ocorrencia=QUINTA_FEIRA 19 ==> faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 9    conf:(0.47)
+ 71. semana_do_mes_ocorrencia=SEGUNDA_SEMANA 30 ==> causa_acidente=Outras 14    conf:(0.47)
+ 72. RODOVIA=RODOVIA_116 15 ==> tipo_acidente=Colisãofrontal 7    conf:(0.47)
+ 73. causa_acidente=Ultrapassagemindevida 15 ==> RODOVIA=RODOVIA_381 7    conf:(0.47)
+ 74. causa_acidente=Ultrapassagemindevida 15 ==> periodo_dia_reg_ocorrencia=TARDE_12_00_A_17_00 7    conf:(0.47)
+ 75. tipo_acidente=Colisãofrontal periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 15 ==> causa_acidente=Velocidadeincompatível 7    conf:(0.47)
+ 76. tipo_acidente=Colisãofrontal causa_acidente=Velocidadeincompatível 15 ==> periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 7    conf:(0.47)
+ 77. mes_da_ocorrencia=JUNHO 13 ==> tipo_acidente=Colisãofrontal 6    conf:(0.46)
+ 78. mes_da_ocorrencia=JUNHO 13 ==> faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 6    conf:(0.46)
+ 79. RODOVIA=RODOVIA_40 25 ==> tipo_acidente=Colisãofrontal 11    conf:(0.44)
+ 80. tipo_acidente=SaídadePista 16 ==> semana_do_mes_ocorrencia=SEGUNDA_SEMANA 7    conf:(0.44)
+ 81. faixa_idade_pessoa_envolvida=IDADE_40_a_49_ANOS 16 ==> causa_acidente=Outras 7    conf:(0.44)
+ 82. dia_da_semana_ocorrencia=SABADO 23 ==> semana_do_mes_ocorrencia=SEGUNDA_SEMANA 10    conf:(0.43)
+ 83. semana_do_mes_ocorrencia=SEGUNDA_SEMANA 30 ==> tipo_acidente=Colisãofrontal 13    conf:(0.43)
+ 84. faixa_idade_pessoa_envolvida=IDADE_18_a_24_ANOS 14 ==> causa_acidente=Outras 6    conf:(0.43)
+ 85. faixa_idade_pessoa_envolvida=IDADE_18_a_24_ANOS 14 ==> periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 6    conf:(0.43)
+ 86. faixa_idade_pessoa_envolvida=IDADE_18_a_24_ANOS 14 ==> semana_do_mes_ocorrencia=SEGUNDA_SEMANA 6    conf:(0.43)
+ 87. dia_da_semana_ocorrencia=QUARTA_FEIRA 14 ==> faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 6    conf:(0.43)
+ 88. dia_da_semana_ocorrencia=QUARTA_FEIRA 14 ==> periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 6    conf:(0.43)
+ 89. RODOVIA=RODOVIA_40 faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 14 ==> tipo_acidente=Colisãofrontal 6    conf:(0.43)
+ 90. causa_acidente=Outras semana_do_mes_ocorrencia=SEGUNDA_SEMANA 14 ==> tipo_acidente=ColisãoTransversal 6    conf:(0.43)
+ 91. periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 33 ==> tipo_acidente=Colisãofrontal 14    conf:(0.42)
+ 92. dia_da_semana_ocorrencia=DOMINGO 19 ==> faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 8    conf:(0.42)
+ 93. dia_da_semana_ocorrencia=QUINTA_FEIRA 19 ==> semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 8    conf:(0.42)
+ 94. causa_acidente=Outras 36 ==> tipo_acidente=Colisãofrontal 15    conf:(0.42)
+ 95. semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 24 ==> periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 10    conf:(0.42)
+ 96. RODOVIA=RODOVIA_381 17 ==> causa_acidente=Ultrapassagemindevida 7    conf:(0.41)
+ 97. faixa_idade_pessoa_envolvida=IDADE_25_a_29_ANOS 17 ==> periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 7    conf:(0.41)
+ 98. faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 35 ==> RODOVIA=RODOVIA_40 14    conf:(0.4)
+ 99. periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 30 ==> causa_acidente=Outras 12    conf:(0.4)
+100. RODOVIA=RODOVIA_40 25 ==> semana_do_mes_ocorrencia=SEGUNDA_SEMANA 10    conf:(0.4)
+

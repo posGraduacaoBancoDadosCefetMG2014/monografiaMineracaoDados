@@ -1,0 +1,137 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 100 -T 0 -C 0.4 -D 0.005 -U 1.0 -M 0.01 -S -1.0 -c -1
+Relation:     ocorrenciasAcidentesDPRF-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C8-L1,3-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C9-L1,3-weka.filters.unsupervised.attribute.Remove-R8-9-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C4-Lfirst-3-weka.filters.unsupervised.attribute.Remove-R4-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C6-L1,2,4-weka.filters.unsupervised.attribute.Remove-R6-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C4-L10-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C5-L6
+Instances:    567
+Attributes:   10
+              municipio
+              trecho
+              RODOVIA
+              tipo_acidente
+              causa_acidente
+              faixa_idade_pessoa_envolvida
+              periodo_dia_reg_ocorrencia
+              dia_da_semana_ocorrencia
+              semana_do_mes_ocorrencia
+              mes_da_ocorrencia
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.02 (14 instances)
+Minimum metric <confidence>: 0.4
+Number of cycles performed: 195
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 69
+
+Size of set of large itemsets L(2): 366
+
+Size of set of large itemsets L(3): 62
+
+Best rules found:
+
+  1. trecho=ENTR BR-262 (JOÃO MONLEVADE) - ENTR MG-129 (SÃO GONÇALO DO RIO ABAIXO) 27 ==> RODOVIA=RODOVIA_381 27    conf:(1)
+  2. trecho=ENTR BR-120(B) (NOVA ERA) (P/ SÃO DOMINGOS DO PRATA) - ENTR BR-262 (JOÃO MONLEVADE) 26 ==> RODOVIA=RODOVIA_381 26    conf:(1)
+  3. trecho=ENTR MG-434 - ENTR MG-435 (JOSÉ DE MELO) 19 ==> RODOVIA=RODOVIA_381 19    conf:(1)
+  4. trecho=ENTR BR-356(B) - ENTR MG-442 (P/BELOVALE) 18 ==> RODOVIA=RODOVIA_40 18    conf:(1)
+  5. trecho=ENTR BR-120(B) (NOVA ERA) (P/ SÃO DOMINGOS DO PRATA) - ENTR BR-262 (JOÃO MONLEVADE) causa_acidente=Velocidadeincompatível 18 ==> RODOVIA=RODOVIA_381 18    conf:(1)
+  6. trecho=ENTR BR-499 (SANTOS DUMONT) - ENTR ANT UNIÃO E INDÚSTRIA (B. TRIUNFO) 16 ==> RODOVIA=RODOVIA_40 16    conf:(1)
+  7. trecho=ENTR MG-320 (P/JAGUARAÇU) - ACESSO SANTA MARIA DE ITABIRA 14 ==> RODOVIA=RODOVIA_381 14    conf:(1)
+  8. trecho=ENTR BR-120(B) (NOVA ERA) (P/ SÃO DOMINGOS DO PRATA) - ENTR BR-262 (JOÃO MONLEVADE) semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 14 ==> RODOVIA=RODOVIA_381 14    conf:(1)
+  9. tipo_acidente=Atropelamentodeanimal 22 ==> causa_acidente=AnimaisnaPista 21    conf:(0.95)
+ 10. causa_acidente=Desobediênciaàsinalização periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 17 ==> tipo_acidente=ColisãoTransversal 16    conf:(0.94)
+ 11. causa_acidente=AnimaisnaPista 24 ==> tipo_acidente=Atropelamentodeanimal 21    conf:(0.88)
+ 12. causa_acidente=Desobediênciaàsinalização 51 ==> tipo_acidente=ColisãoTransversal 37    conf:(0.73)
+ 13. causa_acidente=Velocidadeincompatível periodo_dia_reg_ocorrencia=TARDE_12_00_A_17_00 40 ==> tipo_acidente=SaídadePista 28    conf:(0.7)
+ 14. trecho=ENTR BR-120(B) (NOVA ERA) (P/ SÃO DOMINGOS DO PRATA) - ENTR BR-262 (JOÃO MONLEVADE) 26 ==> causa_acidente=Velocidadeincompatível 18    conf:(0.69)
+ 15. trecho=ENTR BR-120(B) (NOVA ERA) (P/ SÃO DOMINGOS DO PRATA) - ENTR BR-262 (JOÃO MONLEVADE) RODOVIA=RODOVIA_381 26 ==> causa_acidente=Velocidadeincompatível 18    conf:(0.69)
+ 16. trecho=ENTR BR-120(B) (NOVA ERA) (P/ SÃO DOMINGOS DO PRATA) - ENTR BR-262 (JOÃO MONLEVADE) 26 ==> RODOVIA=RODOVIA_381 causa_acidente=Velocidadeincompatível 18    conf:(0.69)
+ 17. causa_acidente=Dormindo 22 ==> tipo_acidente=SaídadePista 15    conf:(0.68)
+ 18. RODOVIA=RODOVIA_262 causa_acidente=Velocidadeincompatível 25 ==> tipo_acidente=SaídadePista 17    conf:(0.68)
+ 19. causa_acidente=Velocidadeincompatível faixa_idade_pessoa_envolvida=IDADE_50_a_64_ANOS 28 ==> tipo_acidente=SaídadePista 19    conf:(0.68)
+ 20. causa_acidente=Velocidadeincompatível faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 49 ==> tipo_acidente=SaídadePista 33    conf:(0.67)
+ 21. causa_acidente=Velocidadeincompatível dia_da_semana_ocorrencia=SEGUNDA_FEIRA 21 ==> tipo_acidente=SaídadePista 14    conf:(0.67)
+ 22. RODOVIA=RODOVIA_262 tipo_acidente=SaídadePista 26 ==> causa_acidente=Velocidadeincompatível 17    conf:(0.65)
+ 23. causa_acidente=Velocidadeincompatível dia_da_semana_ocorrencia=TERCA_FEIRA 22 ==> tipo_acidente=SaídadePista 14    conf:(0.64)
+ 24. causa_acidente=Velocidadeincompatível periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 47 ==> tipo_acidente=SaídadePista 29    conf:(0.62)
+ 25. tipo_acidente=SaídadePista faixa_idade_pessoa_envolvida=IDADE_50_a_64_ANOS 31 ==> causa_acidente=Velocidadeincompatível 19    conf:(0.61)
+ 26. faixa_idade_pessoa_envolvida=IDADE_25_a_29_ANOS semana_do_mes_ocorrencia=QUARTA_SEMANA 23 ==> tipo_acidente=SaídadePista 14    conf:(0.61)
+ 27. causa_acidente=Velocidadeincompatível semana_do_mes_ocorrencia=QUARTA_SEMANA 41 ==> tipo_acidente=SaídadePista 24    conf:(0.59)
+ 28. tipo_acidente=SaídadePista dia_da_semana_ocorrencia=SEXTA_FEIRA 36 ==> causa_acidente=Velocidadeincompatível 21    conf:(0.58)
+ 29. causa_acidente=Velocidadeincompatível semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 36 ==> tipo_acidente=SaídadePista 21    conf:(0.58)
+ 30. RODOVIA=RODOVIA_381 dia_da_semana_ocorrencia=SEXTA_FEIRA 24 ==> causa_acidente=Velocidadeincompatível 14    conf:(0.58)
+ 31. faixa_idade_pessoa_envolvida=IDADE_25_a_29_ANOS periodo_dia_reg_ocorrencia=TARDE_12_00_A_17_00 33 ==> tipo_acidente=SaídadePista 19    conf:(0.58)
+ 32. RODOVIA=RODOVIA_381 tipo_acidente=SaídadePista 42 ==> causa_acidente=Velocidadeincompatível 24    conf:(0.57)
+ 33. tipo_acidente=ColisãoTransversal 65 ==> causa_acidente=Desobediênciaàsinalização 37    conf:(0.57)
+ 34. causa_acidente=Velocidadeincompatível 174 ==> tipo_acidente=SaídadePista 98    conf:(0.56)
+ 35. tipo_acidente=SaídadePista faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 59 ==> causa_acidente=Velocidadeincompatível 33    conf:(0.56)
+ 36. mes_da_ocorrencia=FEVEREIRO 47 ==> tipo_acidente=SaídadePista 26    conf:(0.55)
+ 37. causa_acidente=Velocidadeincompatível dia_da_semana_ocorrencia=SEXTA_FEIRA 38 ==> tipo_acidente=SaídadePista 21    conf:(0.55)
+ 38. causa_acidente=Velocidadeincompatível semana_do_mes_ocorrencia=TERCEIRA_SEMANA 40 ==> tipo_acidente=SaídadePista 22    conf:(0.55)
+ 39. tipo_acidente=SaídadePista periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 53 ==> causa_acidente=Velocidadeincompatível 29    conf:(0.55)
+ 40. causa_acidente=Ultrapassagemindevida 48 ==> tipo_acidente=Colisãolateral 26    conf:(0.54)
+ 41. tipo_acidente=Capotamento 50 ==> causa_acidente=Velocidadeincompatível 27    conf:(0.54)
+ 42. tipo_acidente=SaídadePista semana_do_mes_ocorrencia=SEGUNDA_SEMANA 39 ==> causa_acidente=Velocidadeincompatível 21    conf:(0.54)
+ 43. trecho=ENTR BR-120(B) (NOVA ERA) (P/ SÃO DOMINGOS DO PRATA) - ENTR BR-262 (JOÃO MONLEVADE) 26 ==> semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 14    conf:(0.54)
+ 44. trecho=ENTR BR-120(B) (NOVA ERA) (P/ SÃO DOMINGOS DO PRATA) - ENTR BR-262 (JOÃO MONLEVADE) RODOVIA=RODOVIA_381 26 ==> semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 14    conf:(0.54)
+ 45. trecho=ENTR BR-120(B) (NOVA ERA) (P/ SÃO DOMINGOS DO PRATA) - ENTR BR-262 (JOÃO MONLEVADE) 26 ==> RODOVIA=RODOVIA_381 semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 14    conf:(0.54)
+ 46. RODOVIA=RODOVIA_381 tipo_acidente=Colisãolateral 26 ==> semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 14    conf:(0.54)
+ 47. causa_acidente=Velocidadeincompatível dia_da_semana_ocorrencia=SABADO 28 ==> tipo_acidente=SaídadePista 15    conf:(0.54)
+ 48. tipo_acidente=Colisãolateral periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 32 ==> faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 17    conf:(0.53)
+ 49. tipo_acidente=ColisãoTransversal 65 ==> periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 34    conf:(0.52)
+ 50. RODOVIA=RODOVIA_40 causa_acidente=Velocidadeincompatível 27 ==> tipo_acidente=SaídadePista 14    conf:(0.52)
+ 51. tipo_acidente=SaídadePista dia_da_semana_ocorrencia=DOMINGO 27 ==> causa_acidente=Velocidadeincompatível 14    conf:(0.52)
+ 52. tipo_acidente=SaídadePista dia_da_semana_ocorrencia=SABADO 29 ==> causa_acidente=Velocidadeincompatível 15    conf:(0.52)
+ 53. tipo_acidente=SaídadePista semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 41 ==> causa_acidente=Velocidadeincompatível 21    conf:(0.51)
+ 54. tipo_acidente=SaídadePista periodo_dia_reg_ocorrencia=TARDE_12_00_A_17_00 55 ==> causa_acidente=Velocidadeincompatível 28    conf:(0.51)
+ 55. causa_acidente=Velocidadeincompatível semana_do_mes_ocorrencia=SEGUNDA_SEMANA 42 ==> tipo_acidente=SaídadePista 21    conf:(0.5)
+ 56. periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 semana_do_mes_ocorrencia=QUARTA_SEMANA 40 ==> tipo_acidente=SaídadePista 20    conf:(0.5)
+ 57. tipo_acidente=SaídadePista 200 ==> causa_acidente=Velocidadeincompatível 98    conf:(0.49)
+ 58. tipo_acidente=SaídadePista semana_do_mes_ocorrencia=TERCEIRA_SEMANA 45 ==> causa_acidente=Velocidadeincompatível 22    conf:(0.49)
+ 59. causa_acidente=Outras faixa_idade_pessoa_envolvida=IDADE_25_a_29_ANOS 35 ==> tipo_acidente=SaídadePista 17    conf:(0.49)
+ 60. causa_acidente=Outras semana_do_mes_ocorrencia=TERCEIRA_SEMANA 35 ==> periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 17    conf:(0.49)
+ 61. RODOVIA=RODOVIA_381 faixa_idade_pessoa_envolvida=IDADE_25_a_29_ANOS 29 ==> causa_acidente=Velocidadeincompatível 14    conf:(0.48)
+ 62. RODOVIA=RODOVIA_381 semana_do_mes_ocorrencia=SEGUNDA_SEMANA 29 ==> causa_acidente=Velocidadeincompatível 14    conf:(0.48)
+ 63. RODOVIA=RODOVIA_381 semana_do_mes_ocorrencia=SEGUNDA_SEMANA 29 ==> periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 14    conf:(0.48)
+ 64. tipo_acidente=SaídadePista dia_da_semana_ocorrencia=SEGUNDA_FEIRA 29 ==> causa_acidente=Velocidadeincompatível 14    conf:(0.48)
+ 65. tipo_acidente=SaídadePista dia_da_semana_ocorrencia=TERCA_FEIRA 29 ==> causa_acidente=Velocidadeincompatível 14    conf:(0.48)
+ 66. causa_acidente=Velocidadeincompatível dia_da_semana_ocorrencia=DOMINGO 29 ==> tipo_acidente=SaídadePista 14    conf:(0.48)
+ 67. tipo_acidente=Colisãofrontal 36 ==> RODOVIA=RODOVIA_381 17    conf:(0.47)
+ 68. tipo_acidente=ColisãoTransversal periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 34 ==> causa_acidente=Desobediênciaàsinalização 16    conf:(0.47)
+ 69. causa_acidente=Outras semana_do_mes_ocorrencia=QUARTA_SEMANA 45 ==> tipo_acidente=SaídadePista 21    conf:(0.47)
+ 70. RODOVIA=RODOVIA_381 causa_acidente=Velocidadeincompatível 52 ==> tipo_acidente=SaídadePista 24    conf:(0.46)
+ 71. RODOVIA=RODOVIA_381 semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 33 ==> causa_acidente=Velocidadeincompatível 15    conf:(0.45)
+ 72. RODOVIA=RODOVIA_365 31 ==> periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 14    conf:(0.45)
+ 73. mes_da_ocorrencia=MARCO 47 ==> tipo_acidente=SaídadePista 21    conf:(0.45)
+ 74. tipo_acidente=SaídadePista faixa_idade_pessoa_envolvida=IDADE_25_a_29_ANOS 43 ==> periodo_dia_reg_ocorrencia=TARDE_12_00_A_17_00 19    conf:(0.44)
+ 75. periodo_dia_reg_ocorrencia=TARDE_12_00_A_17_00 semana_do_mes_ocorrencia=SEGUNDA_SEMANA 34 ==> tipo_acidente=SaídadePista 15    conf:(0.44)
+ 76. mes_da_ocorrencia=SETEMBRO 41 ==> tipo_acidente=SaídadePista 18    conf:(0.44)
+ 77. mes_da_ocorrencia=SETEMBRO 41 ==> causa_acidente=Velocidadeincompatível 18    conf:(0.44)
+ 78. RODOVIA=RODOVIA_381 periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 41 ==> causa_acidente=Velocidadeincompatível 18    conf:(0.44)
+ 79. causa_acidente=Outras semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 41 ==> tipo_acidente=Colisãolateral 18    conf:(0.44)
+ 80. tipo_acidente=SaídadePista semana_do_mes_ocorrencia=QUARTA_SEMANA 55 ==> causa_acidente=Velocidadeincompatível 24    conf:(0.44)
+ 81. causa_acidente=Velocidadeincompatível faixa_idade_pessoa_envolvida=IDADE_25_a_29_ANOS 39 ==> tipo_acidente=SaídadePista 17    conf:(0.44)
+ 82. semana_do_mes_ocorrencia=QUINTA_SEMANA 46 ==> tipo_acidente=SaídadePista 20    conf:(0.43)
+ 83. mes_da_ocorrencia=DEZEMBRO 46 ==> causa_acidente=Velocidadeincompatível 20    conf:(0.43)
+ 84. semana_do_mes_ocorrencia=QUINTA_SEMANA 46 ==> faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 20    conf:(0.43)
+ 85. tipo_acidente=ColisãoTransversal causa_acidente=Desobediênciaàsinalização 37 ==> periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 16    conf:(0.43)
+ 86. periodo_dia_reg_ocorrencia=TARDE_12_00_A_17_00 semana_do_mes_ocorrencia=QUARTA_SEMANA 37 ==> tipo_acidente=SaídadePista 16    conf:(0.43)
+ 87. causa_acidente=Velocidadeincompatível periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 51 ==> tipo_acidente=SaídadePista 22    conf:(0.43)
+ 88. RODOVIA=RODOVIA_381 periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 35 ==> causa_acidente=Velocidadeincompatível 15    conf:(0.43)
+ 89. dia_da_semana_ocorrencia=TERCA_FEIRA 68 ==> tipo_acidente=SaídadePista 29    conf:(0.43)
+ 90. faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 40 ==> tipo_acidente=Colisãolateral 17    conf:(0.43)
+ 91. periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 semana_do_mes_ocorrencia=QUARTA_SEMANA 40 ==> causa_acidente=Velocidadeincompatível 17    conf:(0.43)
+ 92. RODOVIA=RODOVIA_381 semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 33 ==> trecho=ENTR BR-120(B) (NOVA ERA) (P/ SÃO DOMINGOS DO PRATA) - ENTR BR-262 (JOÃO MONLEVADE) 14    conf:(0.42)
+ 93. RODOVIA=RODOVIA_381 semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 33 ==> tipo_acidente=Colisãolateral 14    conf:(0.42)
+ 94. RODOVIA=RODOVIA_381 semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 33 ==> causa_acidente=Outras 14    conf:(0.42)
+ 95. tipo_acidente=SaídadePista periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 52 ==> causa_acidente=Velocidadeincompatível 22    conf:(0.42)
+ 96. periodo_dia_reg_ocorrencia=MADRUGADA_00_00_A_05_00 38 ==> faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 16    conf:(0.42)
+ 97. causa_acidente=Velocidadeincompatível semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 36 ==> RODOVIA=RODOVIA_381 15    conf:(0.42)
+ 98. mes_da_ocorrencia=AGOSTO 41 ==> faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 17    conf:(0.41)
+ 99. causa_acidente=Velocidadeincompatível semana_do_mes_ocorrencia=QUARTA_SEMANA 41 ==> periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 17    conf:(0.41)
+100. dia_da_semana_ocorrencia=SEGUNDA_FEIRA 70 ==> tipo_acidente=SaídadePista 29    conf:(0.41)
+

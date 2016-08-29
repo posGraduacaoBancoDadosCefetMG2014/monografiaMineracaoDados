@@ -1,0 +1,139 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 100 -T 0 -C 0.4 -D 0.005 -U 1.0 -M 0.01 -S -1.0 -c -1
+Relation:     ocorrenciasAcidentesDPRF-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C8-L1,3-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C9-L1,3-weka.filters.unsupervised.attribute.Remove-R8-9-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C4-L2-last-weka.filters.unsupervised.attribute.Remove-R4-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C6-L1,2,4-weka.filters.unsupervised.attribute.Remove-R6-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C4-L10
+Instances:    1281
+Attributes:   10
+              municipio
+              trecho
+              RODOVIA
+              tipo_acidente
+              causa_acidente
+              faixa_idade_pessoa_envolvida
+              periodo_dia_reg_ocorrencia
+              dia_da_semana_ocorrencia
+              semana_do_mes_ocorrencia
+              mes_da_ocorrencia
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.04 (58 instances)
+Minimum metric <confidence>: 0.4
+Number of cycles performed: 191
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 54
+
+Size of set of large itemsets L(2): 159
+
+Size of set of large itemsets L(3): 25
+
+Size of set of large itemsets L(4): 1
+
+Best rules found:
+
+  1. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) 213 ==> RODOVIA=RODOVIA_381 213    conf:(1)
+  2. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) tipo_acidente=Colisãolateral 148 ==> RODOVIA=RODOVIA_381 148    conf:(1)
+  3. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) causa_acidente=Faltadeatenção 117 ==> RODOVIA=RODOVIA_381 117    conf:(1)
+  4. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) tipo_acidente=Colisãolateral causa_acidente=Faltadeatenção 99 ==> RODOVIA=RODOVIA_381 99    conf:(1)
+  5. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 74 ==> RODOVIA=RODOVIA_381 74    conf:(1)
+  6. trecho=ENTR BR-262(B) (BETIM) - ENTR MG-155 67 ==> RODOVIA=RODOVIA_381 67    conf:(1)
+  7. trecho=ENTR MG-295 (CAMBUÍ) - ENTR MG-460 (P/TOLEDO) 63 ==> RODOVIA=RODOVIA_381 63    conf:(1)
+  8. trecho=ENTR BR-265 (LAVRAS) - ENTR MG-167(A) (P/TRÊS CORAÇÕES) 61 ==> RODOVIA=RODOVIA_381 61    conf:(1)
+  9. municipio=Betim / Contagem 60 ==> trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) 60    conf:(1)
+ 10. municipio=Betim / Contagem 60 ==> RODOVIA=RODOVIA_381 60    conf:(1)
+ 11. municipio=Betim / Contagem RODOVIA=RODOVIA_381 60 ==> trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) 60    conf:(1)
+ 12. municipio=Betim / Contagem trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) 60 ==> RODOVIA=RODOVIA_381 60    conf:(1)
+ 13. municipio=Betim / Contagem 60 ==> trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) RODOVIA=RODOVIA_381 60    conf:(1)
+ 14. municipio=Betim 78 ==> RODOVIA=RODOVIA_381 76    conf:(0.97)
+ 15. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) causa_acidente=Faltadeatenção 117 ==> tipo_acidente=Colisãolateral 99    conf:(0.85)
+ 16. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) RODOVIA=RODOVIA_381 causa_acidente=Faltadeatenção 117 ==> tipo_acidente=Colisãolateral 99    conf:(0.85)
+ 17. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) causa_acidente=Faltadeatenção 117 ==> RODOVIA=RODOVIA_381 tipo_acidente=Colisãolateral 99    conf:(0.85)
+ 18. tipo_acidente=Colisãolateral dia_da_semana_ocorrencia=SEXTA_FEIRA 84 ==> causa_acidente=Faltadeatenção 60    conf:(0.71)
+ 19. causa_acidente=Faltadeatenção dia_da_semana_ocorrencia=SEXTA_FEIRA 86 ==> tipo_acidente=Colisãolateral 60    conf:(0.7)
+ 20. tipo_acidente=Colisãolateral faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 125 ==> causa_acidente=Faltadeatenção 87    conf:(0.7)
+ 21. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) 213 ==> tipo_acidente=Colisãolateral 148    conf:(0.69)
+ 22. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) RODOVIA=RODOVIA_381 213 ==> tipo_acidente=Colisãolateral 148    conf:(0.69)
+ 23. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) 213 ==> RODOVIA=RODOVIA_381 tipo_acidente=Colisãolateral 148    conf:(0.69)
+ 24. RODOVIA=RODOVIA_381 tipo_acidente=Colisãolateral causa_acidente=Faltadeatenção 145 ==> trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) 99    conf:(0.68)
+ 25. RODOVIA=RODOVIA_40 causa_acidente=Faltadeatenção 88 ==> tipo_acidente=Colisãolateral 59    conf:(0.67)
+ 26. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) tipo_acidente=Colisãolateral 148 ==> causa_acidente=Faltadeatenção 99    conf:(0.67)
+ 27. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) RODOVIA=RODOVIA_381 tipo_acidente=Colisãolateral 148 ==> causa_acidente=Faltadeatenção 99    conf:(0.67)
+ 28. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) tipo_acidente=Colisãolateral 148 ==> RODOVIA=RODOVIA_381 causa_acidente=Faltadeatenção 99    conf:(0.67)
+ 29. RODOVIA=RODOVIA_381 causa_acidente=Faltadeatenção 219 ==> tipo_acidente=Colisãolateral 145    conf:(0.66)
+ 30. periodo_dia_reg_ocorrencia=MADRUGADA_00_00_A_05_00 114 ==> RODOVIA=RODOVIA_381 75    conf:(0.66)
+ 31. tipo_acidente=Colisãolateral semana_do_mes_ocorrencia=TERCEIRA_SEMANA 105 ==> causa_acidente=Faltadeatenção 69    conf:(0.66)
+ 32. causa_acidente=Faltadeatenção faixa_idade_pessoa_envolvida=IDADE_40_a_49_ANOS 99 ==> tipo_acidente=Colisãolateral 65    conf:(0.66)
+ 33. causa_acidente=Faltadeatenção periodo_dia_reg_ocorrencia=TARDE_12_00_A_17_00 104 ==> tipo_acidente=Colisãolateral 68    conf:(0.65)
+ 34. causa_acidente=Faltadeatenção semana_do_mes_ocorrencia=SEGUNDA_SEMANA 104 ==> tipo_acidente=Colisãolateral 68    conf:(0.65)
+ 35. tipo_acidente=SaídadePista causa_acidente=Velocidadeincompatível 141 ==> RODOVIA=RODOVIA_381 92    conf:(0.65)
+ 36. causa_acidente=Faltadeatenção semana_do_mes_ocorrencia=TERCEIRA_SEMANA 106 ==> tipo_acidente=Colisãolateral 69    conf:(0.65)
+ 37. causa_acidente=Velocidadeincompatível periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 93 ==> RODOVIA=RODOVIA_381 60    conf:(0.65)
+ 38. tipo_acidente=Colisãolateral periodo_dia_reg_ocorrencia=TARDE_12_00_A_17_00 106 ==> causa_acidente=Faltadeatenção 68    conf:(0.64)
+ 39. causa_acidente=Faltadeatenção 438 ==> tipo_acidente=Colisãolateral 280    conf:(0.64)
+ 40. causa_acidente=Velocidadeincompatível faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 99 ==> RODOVIA=RODOVIA_381 63    conf:(0.64)
+ 41. tipo_acidente=Colisãolateral semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 99 ==> causa_acidente=Faltadeatenção 63    conf:(0.64)
+ 42. causa_acidente=Velocidadeincompatível 302 ==> RODOVIA=RODOVIA_381 192    conf:(0.64)
+ 43. tipo_acidente=Colisãolateral 443 ==> causa_acidente=Faltadeatenção 280    conf:(0.63)
+ 44. causa_acidente=Faltadeatenção periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 116 ==> tipo_acidente=Colisãolateral 73    conf:(0.63)
+ 45. RODOVIA=RODOVIA_40 tipo_acidente=Colisãolateral 94 ==> causa_acidente=Faltadeatenção 59    conf:(0.63)
+ 46. RODOVIA=RODOVIA_381 tipo_acidente=Colisãolateral 236 ==> trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) 148    conf:(0.63)
+ 47. causa_acidente=Faltadeatenção faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 141 ==> tipo_acidente=Colisãolateral 87    conf:(0.62)
+ 48. tipo_acidente=Colisãolateral periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 112 ==> causa_acidente=Faltadeatenção 69    conf:(0.62)
+ 49. RODOVIA=RODOVIA_381 tipo_acidente=Colisãolateral 236 ==> causa_acidente=Faltadeatenção 145    conf:(0.61)
+ 50. tipo_acidente=Colisãolateral semana_do_mes_ocorrencia=SEGUNDA_SEMANA 111 ==> causa_acidente=Faltadeatenção 68    conf:(0.61)
+ 51. causa_acidente=Faltadeatenção semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 103 ==> tipo_acidente=Colisãolateral 63    conf:(0.61)
+ 52. tipo_acidente=Colisãolateral semana_do_mes_ocorrencia=QUARTA_SEMANA 97 ==> causa_acidente=Faltadeatenção 59    conf:(0.61)
+ 53. causa_acidente=Faltadeatenção semana_do_mes_ocorrencia=QUARTA_SEMANA 98 ==> tipo_acidente=Colisãolateral 59    conf:(0.6)
+ 54. periodo_dia_reg_ocorrencia=OCASO_17_00_A_18_30 108 ==> RODOVIA=RODOVIA_381 65    conf:(0.6)
+ 55. tipo_acidente=Colisãolateral faixa_idade_pessoa_envolvida=IDADE_40_a_49_ANOS 109 ==> causa_acidente=Faltadeatenção 65    conf:(0.6)
+ 56. causa_acidente=Faltadeatenção periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 118 ==> tipo_acidente=Colisãolateral 69    conf:(0.58)
+ 57. tipo_acidente=Colisãolateral periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 125 ==> causa_acidente=Faltadeatenção 73    conf:(0.58)
+ 58. faixa_idade_pessoa_envolvida=IDADE_25_a_29_ANOS 250 ==> RODOVIA=RODOVIA_381 143    conf:(0.57)
+ 59. tipo_acidente=Colisãocomobjetofixo 216 ==> RODOVIA=RODOVIA_381 123    conf:(0.57)
+ 60. dia_da_semana_ocorrencia=QUARTA_FEIRA 167 ==> RODOVIA=RODOVIA_381 95    conf:(0.57)
+ 61. tipo_acidente=Colisãolateral semana_do_mes_ocorrencia=SEGUNDA_SEMANA 111 ==> RODOVIA=RODOVIA_381 63    conf:(0.57)
+ 62. tipo_acidente=SaídadePista faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 104 ==> RODOVIA=RODOVIA_381 59    conf:(0.57)
+ 63. dia_da_semana_ocorrencia=QUINTA_FEIRA 159 ==> RODOVIA=RODOVIA_381 89    conf:(0.56)
+ 64. faixa_idade_pessoa_envolvida=IDADE_18_a_24_ANOS 145 ==> RODOVIA=RODOVIA_381 81    conf:(0.56)
+ 65. causa_acidente=Faltadeatenção faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 141 ==> RODOVIA=RODOVIA_381 78    conf:(0.55)
+ 66. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) 213 ==> causa_acidente=Faltadeatenção 117    conf:(0.55)
+ 67. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) RODOVIA=RODOVIA_381 213 ==> causa_acidente=Faltadeatenção 117    conf:(0.55)
+ 68. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) 213 ==> RODOVIA=RODOVIA_381 causa_acidente=Faltadeatenção 117    conf:(0.55)
+ 69. semana_do_mes_ocorrencia=QUARTA_SEMANA 301 ==> RODOVIA=RODOVIA_381 164    conf:(0.54)
+ 70. tipo_acidente=SaídadePista 348 ==> RODOVIA=RODOVIA_381 188    conf:(0.54)
+ 71. tipo_acidente=Colisãolateral periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 125 ==> RODOVIA=RODOVIA_381 67    conf:(0.54)
+ 72. RODOVIA=RODOVIA_381 causa_acidente=Faltadeatenção 219 ==> trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) 117    conf:(0.53)
+ 73. tipo_acidente=Colisãolateral 443 ==> RODOVIA=RODOVIA_381 236    conf:(0.53)
+ 74. dia_da_semana_ocorrencia=SEXTA_FEIRA 208 ==> RODOVIA=RODOVIA_381 110    conf:(0.53)
+ 75. faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 405 ==> RODOVIA=RODOVIA_381 214    conf:(0.53)
+ 76. tipo_acidente=Colisãolateral faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 125 ==> RODOVIA=RODOVIA_381 66    conf:(0.53)
+ 77. mes_da_ocorrencia=MAIO 112 ==> RODOVIA=RODOVIA_381 59    conf:(0.53)
+ 78. mes_da_ocorrencia=NOVEMBRO 120 ==> RODOVIA=RODOVIA_381 63    conf:(0.53)
+ 79. semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 288 ==> RODOVIA=RODOVIA_381 151    conf:(0.52)
+ 80. mes_da_ocorrencia=JANEIRO 125 ==> RODOVIA=RODOVIA_381 65    conf:(0.52)
+ 81. tipo_acidente=Colisãolateral causa_acidente=Faltadeatenção 280 ==> RODOVIA=RODOVIA_381 145    conf:(0.52)
+ 82. periodo_dia_reg_ocorrencia=TARDE_12_00_A_17_00 290 ==> RODOVIA=RODOVIA_381 150    conf:(0.52)
+ 83. semana_do_mes_ocorrencia=TERCEIRA_SEMANA 281 ==> RODOVIA=RODOVIA_381 145    conf:(0.52)
+ 84. dia_da_semana_ocorrencia=SABADO 167 ==> RODOVIA=RODOVIA_381 86    conf:(0.51)
+ 85. dia_da_semana_ocorrencia=DOMINGO 189 ==> RODOVIA=RODOVIA_381 97    conf:(0.51)
+ 86. periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 374 ==> RODOVIA=RODOVIA_381 190    conf:(0.51)
+ 87. causa_acidente=Faltadeatenção 438 ==> RODOVIA=RODOVIA_381 219    conf:(0.5)
+ 88. semana_do_mes_ocorrencia=SEGUNDA_SEMANA 308 ==> RODOVIA=RODOVIA_381 154    conf:(0.5)
+ 89. RODOVIA=RODOVIA_381 tipo_acidente=SaídadePista 188 ==> causa_acidente=Velocidadeincompatível 92    conf:(0.49)
+ 90. causa_acidente=Outras 315 ==> RODOVIA=RODOVIA_381 154    conf:(0.49)
+ 91. dia_da_semana_ocorrencia=SEGUNDA_FEIRA 213 ==> RODOVIA=RODOVIA_381 104    conf:(0.49)
+ 92. mes_da_ocorrencia=DEZEMBRO 127 ==> RODOVIA=RODOVIA_381 61    conf:(0.48)
+ 93. RODOVIA=RODOVIA_381 causa_acidente=Velocidadeincompatível 192 ==> tipo_acidente=SaídadePista 92    conf:(0.48)
+ 94. faixa_idade_pessoa_envolvida=IDADE_40_a_49_ANOS 265 ==> RODOVIA=RODOVIA_381 125    conf:(0.47)
+ 95. causa_acidente=Velocidadeincompatível 302 ==> tipo_acidente=SaídadePista 141    conf:(0.47)
+ 96. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) 213 ==> tipo_acidente=Colisãolateral causa_acidente=Faltadeatenção 99    conf:(0.46)
+ 97. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) RODOVIA=RODOVIA_381 213 ==> tipo_acidente=Colisãolateral causa_acidente=Faltadeatenção 99    conf:(0.46)
+ 98. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) 213 ==> RODOVIA=RODOVIA_381 tipo_acidente=Colisãolateral causa_acidente=Faltadeatenção 99    conf:(0.46)
+ 99. dia_da_semana_ocorrencia=TERCA_FEIRA 178 ==> RODOVIA=RODOVIA_381 82    conf:(0.46)
+100. mes_da_ocorrencia=FEVEREIRO 126 ==> RODOVIA=RODOVIA_381 58    conf:(0.46)
+

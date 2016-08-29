@@ -1,0 +1,137 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 100 -T 0 -C 0.4 -D 0.005 -U 1.0 -M 0.01 -S -1.0 -c -1
+Relation:     ocorrenciasAcidentesDPRF-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C8-L1,3-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C9-L2-last-weka.filters.unsupervised.attribute.Remove-R8-9-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C4-L2-last-weka.filters.unsupervised.attribute.Remove-R4-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C6-Lfirst-3-weka.filters.unsupervised.attribute.Remove-R6
+Instances:    964
+Attributes:   10
+              municipio
+              trecho
+              RODOVIA
+              tipo_acidente
+              causa_acidente
+              faixa_idade_pessoa_envolvida
+              periodo_dia_reg_ocorrencia
+              dia_da_semana_ocorrencia
+              semana_do_mes_ocorrencia
+              mes_da_ocorrencia
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.03 (34 instances)
+Minimum metric <confidence>: 0.4
+Number of cycles performed: 193
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 63
+
+Size of set of large itemsets L(2): 212
+
+Size of set of large itemsets L(3): 30
+
+Best rules found:
+
+  1. trecho=ENTR BR-262(B) (BETIM) - ENTR MG-155 79 ==> RODOVIA=RODOVIA_381 79    conf:(1)
+  2. trecho=ENTR MG-040 (PARQUE INDUSTRIAL) - ENTR BR-262(B) (BETIM) 59 ==> RODOVIA=RODOVIA_381 59    conf:(1)
+  3. trecho=ENTR BR-265 (LAVRAS) - ENTR MG-167(A) (P/TRÊS CORAÇÕES) 43 ==> RODOVIA=RODOVIA_381 43    conf:(1)
+  4. trecho=ENTR MG-238 (P/SETE LAGOAS) - ENTR MG-432 (P/ESMERALDAS) 43 ==> RODOVIA=RODOVIA_40 43    conf:(1)
+  5. trecho=ENTR MG-432 (P/ESMERALDAS) - INÍCIO PISTA DUPLA 42 ==> RODOVIA=RODOVIA_40 42    conf:(1)
+  6. trecho=ENTR MG-295 (CAMBUÍ) - ENTR MG-460 (P/TOLEDO) 41 ==> RODOVIA=RODOVIA_381 41    conf:(1)
+  7. trecho=ENTR BR-459 (P/POUSO ALEGRE) - ENTR MG-295 (CAMBUÍ) 39 ==> RODOVIA=RODOVIA_381 39    conf:(1)
+  8. trecho=ENTR BR-262(B) (BETIM) - ENTR MG-155 causa_acidente=Velocidadeincompatível 36 ==> RODOVIA=RODOVIA_381 36    conf:(1)
+  9. tipo_acidente=Tombamento causa_acidente=Velocidadeincompatível 47 ==> RODOVIA=RODOVIA_381 41    conf:(0.87)
+ 10. tipo_acidente=Tombamento 56 ==> RODOVIA=RODOVIA_381 48    conf:(0.86)
+ 11. RODOVIA=RODOVIA_381 tipo_acidente=Tombamento 48 ==> causa_acidente=Velocidadeincompatível 41    conf:(0.85)
+ 12. tipo_acidente=Tombamento 56 ==> causa_acidente=Velocidadeincompatível 47    conf:(0.84)
+ 13. municipio=Betim 48 ==> RODOVIA=RODOVIA_381 37    conf:(0.77)
+ 14. tipo_acidente=Tombamento 56 ==> RODOVIA=RODOVIA_381 causa_acidente=Velocidadeincompatível 41    conf:(0.73)
+ 15. causa_acidente=Velocidadeincompatível periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 81 ==> RODOVIA=RODOVIA_381 55    conf:(0.68)
+ 16. periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 semana_do_mes_ocorrencia=SEGUNDA_SEMANA 56 ==> RODOVIA=RODOVIA_381 38    conf:(0.68)
+ 17. causa_acidente=Velocidadeincompatível semana_do_mes_ocorrencia=SEGUNDA_SEMANA 89 ==> RODOVIA=RODOVIA_381 59    conf:(0.66)
+ 18. tipo_acidente=Colisãotraseira semana_do_mes_ocorrencia=QUARTA_SEMANA 56 ==> periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 37    conf:(0.66)
+ 19. causa_acidente=Velocidadeincompatível semana_do_mes_ocorrencia=TERCEIRA_SEMANA 67 ==> RODOVIA=RODOVIA_381 44    conf:(0.66)
+ 20. causa_acidente=Velocidadeincompatível dia_da_semana_ocorrencia=SEXTA_FEIRA 55 ==> RODOVIA=RODOVIA_381 36    conf:(0.65)
+ 21. causa_acidente=Velocidadeincompatível faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 81 ==> RODOVIA=RODOVIA_381 53    conf:(0.65)
+ 22. dia_da_semana_ocorrencia=QUARTA_FEIRA 118 ==> RODOVIA=RODOVIA_381 77    conf:(0.65)
+ 23. mes_da_ocorrencia=JUNHO 71 ==> RODOVIA=RODOVIA_381 46    conf:(0.65)
+ 24. mes_da_ocorrencia=JULHO 84 ==> RODOVIA=RODOVIA_381 54    conf:(0.64)
+ 25. causa_acidente=Velocidadeincompatível dia_da_semana_ocorrencia=DOMINGO 59 ==> RODOVIA=RODOVIA_381 37    conf:(0.63)
+ 26. periodo_dia_reg_ocorrencia=MADRUGADA_00_00_A_05_00 99 ==> RODOVIA=RODOVIA_381 62    conf:(0.63)
+ 27. faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS semana_do_mes_ocorrencia=SEGUNDA_SEMANA 56 ==> RODOVIA=RODOVIA_381 34    conf:(0.61)
+ 28. causa_acidente=Velocidadeincompatível periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 101 ==> RODOVIA=RODOVIA_381 61    conf:(0.6)
+ 29. causa_acidente=Velocidadeincompatível 304 ==> RODOVIA=RODOVIA_381 182    conf:(0.6)
+ 30. tipo_acidente=SaídadePista causa_acidente=Velocidadeincompatível 62 ==> RODOVIA=RODOVIA_381 37    conf:(0.6)
+ 31. mes_da_ocorrencia=FEVEREIRO 79 ==> RODOVIA=RODOVIA_381 47    conf:(0.59)
+ 32. causa_acidente=Velocidadeincompatível semana_do_mes_ocorrencia=QUARTA_SEMANA 80 ==> RODOVIA=RODOVIA_381 47    conf:(0.59)
+ 33. tipo_acidente=Colisãotraseira causa_acidente=Velocidadeincompatível 91 ==> RODOVIA=RODOVIA_381 53    conf:(0.58)
+ 34. tipo_acidente=Atropelamentodepessoa causa_acidente=Outras 73 ==> RODOVIA=RODOVIA_381 42    conf:(0.58)
+ 35. tipo_acidente=Colisãotraseira semana_do_mes_ocorrencia=SEGUNDA_SEMANA 69 ==> RODOVIA=RODOVIA_381 39    conf:(0.57)
+ 36. faixa_idade_pessoa_envolvida=IDADE_25_a_29_ANOS 131 ==> RODOVIA=RODOVIA_381 74    conf:(0.56)
+ 37. semana_do_mes_ocorrencia=SEGUNDA_SEMANA 227 ==> RODOVIA=RODOVIA_381 128    conf:(0.56)
+ 38. RODOVIA=RODOVIA_381 tipo_acidente=SaídadePista 66 ==> causa_acidente=Velocidadeincompatível 37    conf:(0.56)
+ 39. mes_da_ocorrencia=DEZEMBRO 101 ==> RODOVIA=RODOVIA_381 55    conf:(0.54)
+ 40. semana_do_mes_ocorrencia=QUINTA_SEMANA 95 ==> RODOVIA=RODOVIA_381 51    conf:(0.54)
+ 41. tipo_acidente=Colisãotraseira causa_acidente=Velocidadeincompatível 91 ==> periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 48    conf:(0.53)
+ 42. RODOVIA=RODOVIA_381 tipo_acidente=Atropelamentodepessoa 80 ==> causa_acidente=Outras 42    conf:(0.53)
+ 43. mes_da_ocorrencia=DEZEMBRO 101 ==> causa_acidente=Velocidadeincompatível 53    conf:(0.52)
+ 44. causa_acidente=Velocidadeincompatível faixa_idade_pessoa_envolvida=IDADE_40_a_49_ANOS 67 ==> RODOVIA=RODOVIA_381 35    conf:(0.52)
+ 45. tipo_acidente=Colisãotraseira semana_do_mes_ocorrencia=SEGUNDA_SEMANA 69 ==> causa_acidente=Velocidadeincompatível 36    conf:(0.52)
+ 46. dia_da_semana_ocorrencia=SEXTA_FEIRA 160 ==> RODOVIA=RODOVIA_381 83    conf:(0.52)
+ 47. faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 68 ==> RODOVIA=RODOVIA_381 35    conf:(0.51)
+ 48. faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 257 ==> RODOVIA=RODOVIA_381 132    conf:(0.51)
+ 49. tipo_acidente=Colisãolateral 75 ==> RODOVIA=RODOVIA_381 38    conf:(0.51)
+ 50. tipo_acidente=Atropelamentodepessoa 158 ==> RODOVIA=RODOVIA_381 80    conf:(0.51)
+ 51. dia_da_semana_ocorrencia=DOMINGO 183 ==> RODOVIA=RODOVIA_381 92    conf:(0.5)
+ 52. causa_acidente=Outras semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 78 ==> RODOVIA=RODOVIA_381 39    conf:(0.5)
+ 53. dia_da_semana_ocorrencia=SEGUNDA_FEIRA 125 ==> RODOVIA=RODOVIA_381 62    conf:(0.5)
+ 54. dia_da_semana_ocorrencia=QUINTA_FEIRA 97 ==> RODOVIA=RODOVIA_381 48    conf:(0.49)
+ 55. mes_da_ocorrencia=MARCO 89 ==> RODOVIA=RODOVIA_381 44    conf:(0.49)
+ 56. periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 255 ==> RODOVIA=RODOVIA_381 126    conf:(0.49)
+ 57. periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 semana_do_mes_ocorrencia=QUARTA_SEMANA 81 ==> RODOVIA=RODOVIA_381 40    conf:(0.49)
+ 58. mes_da_ocorrencia=NOVEMBRO 80 ==> RODOVIA=RODOVIA_381 39    conf:(0.49)
+ 59. RODOVIA=RODOVIA_381 tipo_acidente=Colisãotraseira 109 ==> causa_acidente=Velocidadeincompatível 53    conf:(0.49)
+ 60. periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 semana_do_mes_ocorrencia=SEGUNDA_SEMANA 72 ==> RODOVIA=RODOVIA_381 35    conf:(0.49)
+ 61. mes_da_ocorrencia=MARCO 89 ==> causa_acidente=Velocidadeincompatível 43    conf:(0.48)
+ 62. faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 88 ==> RODOVIA=RODOVIA_381 42    conf:(0.48)
+ 63. causa_acidente=Velocidadeincompatível periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 101 ==> tipo_acidente=Colisãotraseira 48    conf:(0.48)
+ 64. semana_do_mes_ocorrencia=QUARTA_SEMANA 221 ==> RODOVIA=RODOVIA_381 105    conf:(0.48)
+ 65. tipo_acidente=SaídadePista 139 ==> RODOVIA=RODOVIA_381 66    conf:(0.47)
+ 66. periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 semana_do_mes_ocorrencia=SEGUNDA_SEMANA 72 ==> causa_acidente=Velocidadeincompatível 34    conf:(0.47)
+ 67. tipo_acidente=Colisãotraseira periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 102 ==> causa_acidente=Velocidadeincompatível 48    conf:(0.47)
+ 68. periodo_dia_reg_ocorrencia=TARDE_12_00_A_17_00 225 ==> RODOVIA=RODOVIA_381 105    conf:(0.47)
+ 69. causa_acidente=Outras faixa_idade_pessoa_envolvida=IDADE_30_a_39_ANOS 75 ==> RODOVIA=RODOVIA_381 35    conf:(0.47)
+ 70. RODOVIA=RODOVIA_381 semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 84 ==> causa_acidente=Outras 39    conf:(0.46)
+ 71. tipo_acidente=Atropelamentodepessoa 158 ==> causa_acidente=Outras 73    conf:(0.46)
+ 72. RODOVIA=RODOVIA_381 semana_do_mes_ocorrencia=SEGUNDA_SEMANA 128 ==> causa_acidente=Velocidadeincompatível 59    conf:(0.46)
+ 73. semana_do_mes_ocorrencia=TERCEIRA_SEMANA 215 ==> RODOVIA=RODOVIA_381 99    conf:(0.46)
+ 74. periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 semana_do_mes_ocorrencia=QUARTA_SEMANA 81 ==> tipo_acidente=Colisãotraseira 37    conf:(0.46)
+ 75. trecho=ENTR BR-262(B) (BETIM) - ENTR MG-155 79 ==> causa_acidente=Velocidadeincompatível 36    conf:(0.46)
+ 76. mes_da_ocorrencia=FEVEREIRO 79 ==> causa_acidente=Velocidadeincompatível 36    conf:(0.46)
+ 77. trecho=ENTR BR-262(B) (BETIM) - ENTR MG-155 RODOVIA=RODOVIA_381 79 ==> causa_acidente=Velocidadeincompatível 36    conf:(0.46)
+ 78. trecho=ENTR BR-262(B) (BETIM) - ENTR MG-155 79 ==> RODOVIA=RODOVIA_381 causa_acidente=Velocidadeincompatível 36    conf:(0.46)
+ 79. faixa_idade_pessoa_envolvida=IDADE_40_a_49_ANOS 220 ==> RODOVIA=RODOVIA_381 100    conf:(0.45)
+ 80. tipo_acidente=Colisãotraseira 240 ==> RODOVIA=RODOVIA_381 109    conf:(0.45)
+ 81. periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 306 ==> RODOVIA=RODOVIA_381 138    conf:(0.45)
+ 82. RODOVIA=RODOVIA_381 semana_do_mes_ocorrencia=QUARTA_SEMANA 105 ==> causa_acidente=Velocidadeincompatível 47    conf:(0.45)
+ 83. tipo_acidente=SaídadePista 139 ==> causa_acidente=Velocidadeincompatível 62    conf:(0.45)
+ 84. RODOVIA=RODOVIA_381 semana_do_mes_ocorrencia=TERCEIRA_SEMANA 99 ==> causa_acidente=Velocidadeincompatível 44    conf:(0.44)
+ 85. RODOVIA=RODOVIA_381 periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 138 ==> causa_acidente=Velocidadeincompatível 61    conf:(0.44)
+ 86. causa_acidente=Faltadeatenção 172 ==> RODOVIA=RODOVIA_381 76    conf:(0.44)
+ 87. faixa_idade_pessoa_envolvida=IDADE_50_a_64_ANOS 195 ==> RODOVIA=RODOVIA_381 86    conf:(0.44)
+ 88. RODOVIA=RODOVIA_381 periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 126 ==> causa_acidente=Velocidadeincompatível 55    conf:(0.44)
+ 89. RODOVIA=RODOVIA_381 dia_da_semana_ocorrencia=SEXTA_FEIRA 83 ==> causa_acidente=Velocidadeincompatível 36    conf:(0.43)
+ 90. causa_acidente=Outras periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 88 ==> RODOVIA=RODOVIA_381 38    conf:(0.43)
+ 91. causa_acidente=Outras 301 ==> RODOVIA=RODOVIA_381 129    conf:(0.43)
+ 92. tipo_acidente=Colisãotraseira 240 ==> periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 102    conf:(0.43)
+ 93. causa_acidente=Outras faixa_idade_pessoa_envolvida=IDADE_40_a_49_ANOS 80 ==> RODOVIA=RODOVIA_381 34    conf:(0.43)
+ 94. tipo_acidente=Colisãotraseira periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 102 ==> RODOVIA=RODOVIA_381 43    conf:(0.42)
+ 95. mes_da_ocorrencia=OUTUBRO 86 ==> RODOVIA=RODOVIA_381 36    conf:(0.42)
+ 96. RODOVIA=RODOVIA_50 86 ==> causa_acidente=Outras 36    conf:(0.42)
+ 97. RODOVIA=RODOVIA_50 86 ==> periodo_dia_reg_ocorrencia=MANHA_06_30_A_12_00 36    conf:(0.42)
+ 98. dia_da_semana_ocorrencia=QUARTA_FEIRA 118 ==> periodo_dia_reg_ocorrencia=NOITE_18_30_A_23_59 49    conf:(0.42)
+ 99. mes_da_ocorrencia=SETEMBRO 93 ==> RODOVIA=RODOVIA_381 38    conf:(0.41)
+100. semana_do_mes_ocorrencia=PRIMEIRA_SEMANA 206 ==> RODOVIA=RODOVIA_381 84    conf:(0.41)
+
